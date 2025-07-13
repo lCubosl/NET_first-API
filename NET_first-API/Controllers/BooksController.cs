@@ -74,5 +74,16 @@ namespace NET_first_API.Controllers
             // status code 204 No Content 
             return NoContent();
         }
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBook(int id)
+        {
+            var book = books.FirstOrDefault(x => x.Id == id);
+            if (book == null)
+                // status code 404 not found
+                return NotFound();
+
+            books.Remove(book);
+            return NoContent();
+        }
     }
 }

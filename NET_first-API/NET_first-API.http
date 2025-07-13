@@ -30,3 +30,6 @@ Content-Type: application/json
   "author": "James Dark",
   "yearPublished": 2023
 }
+
+###
+DELETE {{rootURL}}/api/books/2
