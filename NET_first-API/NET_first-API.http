@@ -1,6 +1,32 @@
-@NET_first_API_HostAddress = http://localhost:5051
+@rootURL = http://localhost:5051
 
-GET {{NET_first_API_HostAddress}}/weatherforecast/
+GET {{rootURL}}/weatherforecast/
 Accept: application/json
 
 ###
+GET {{rootURL}}/api/books
+Accept: application/json
+
+###
+GET {{rootURL}}/api/books/2
+Accept: application/json
+
+###
+POST {{rootURL}}/api/books
+Content-Type: application/json
+{
+  "id":4,
+  "title": "Atomic Habits",
+  "author": "James Clear",
+  "yearPublished": 2023
+}
+
+###
+PUT {{rootURL}}/api/books/2
+Content-Type: application/json
+{
+  "id":2,
+  "title": "Outside the Magic Bookstore",
+  "author": "James Dark",
+  "yearPublished": 2023
+}
