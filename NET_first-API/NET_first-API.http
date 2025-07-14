@@ -15,21 +15,20 @@ Accept: application/json
 POST {{rootURL}}/api/books
 Content-Type: application/json
 {
-  "id":4,
   "title": "Atomic Habits",
   "author": "James Clear",
   "yearPublished": 2023
 }
 
 ###
-PUT {{rootURL}}/api/books/2
+PUT {{rootURL}}/api/books/4
 Content-Type: application/json
 {
-  "id":2,
+  "id":4,
   "title": "Outside the Magic Bookstore",
   "author": "James Dark",
   "yearPublished": 2023
 }
 
 ###
-DELETE {{rootURL}}/api/books/2
+DELETE {{rootURL}}/api/books/4
